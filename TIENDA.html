@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Página de Ventas</title>
     <style>
         /* Estilos personalizados */
@@ -62,6 +63,10 @@
         .map {
             text-align: center;
         }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+    background-color: black;
+}
     </style>
 </head>
 <body>
@@ -95,13 +100,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="5000">
-                    <img class="d-block w-50" src="ruta/a/la/imagen/del/producto1.jpg" alt="Primera imagen del producto">
+                    <img class="d-block w-50 mx-auto" src="imagenes/audifono2.jpg" alt="Primera imagen del producto">
                 </div>
                 <div class="carousel-item" data-interval="5000">
-                    <img class="d-block w-50" src="ruta/a/la/imagen/del/producto2.jpg" alt="Segunda imagen del producto">
+                    <img class="d-block w-50 mx-auto" src="imagenes/mouse1.jpg" alt="Segunda imagen del producto">
                 </div>
                 <div class="carousel-item" data-interval="5000">
-                    <img class="d-block w-50" src="ruta/a/la/imagen/del/producto3.jpg" alt="Tercera imagen del producto">
+                    <img class="d-block w-50 mx-auto" src="imagenes/monitor3.jpg" alt="Tercera imagen del producto">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
