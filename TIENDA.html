@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Página de Ventas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Estilos personalizados */
         body {
+            background-color: #000;
+            color: #fff; /* Esto cambiará el color del texto a blanco para que sea visible en el fondo negro */
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -53,45 +53,33 @@
             justify-content: center;
             gap: 20px;
         }
-        .box {
+        .product {
             text-align: center;
             border: 1px solid #ccc;
             padding: 20px;
             border-radius: 5px;
             width: 200px;
         }
-        .map {
-            text-align: center;
+        /* Estilos para el carrusel */
+        .carousel-item img {
+            max-width: 100%; /* Define el ancho máximo de las imágenes del carrusel */
+            height: auto;
+            display: block;
+            margin: auto; /* Centra las imágenes horizontalmente */
         }
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-    background-color: black;
-}
     </style>
 </head>
 <body>
-    <div class="logo">
-        <a href="#">logo</a>
-    </div>
-    
+
     <nav class="Navbar"> 
-        <a href="inicio.html">Inicio</a>
+        <a href="">Inicio</a>
         <a href="carrito.html">Carrito de Compras</a>
+        <a href="#about">Acerca de</a>
+        <a href="#us">Nosotros</a>
     </nav>
 
-    <header class="content header">
-        <h2 class="tittle">TIENDA ORIENTADA A LA VENTA DE PRODUCTOS GAMER DE CALIDAD</h2>
-        <div class="btn-home">
-            <a href="mas_info.html" class="btn">Saber Más</a>
-            <a href="mas_info.html" class="btn">Saber Más</a>
-        </div>
-    </header>
-
-
-
-    <section class="content about">
-        <h2 class="tittle">PRODUCTOS</h2>
-    
+    <!-- Carrusel -->
+    <section class="content carousel-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -99,50 +87,57 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="5000">
-                    <img class="d-block w-50 mx-auto" src="imagenes/audifono2.jpg" alt="Primera imagen del producto">
+                <div class="carousel-item active">
+                    
+                    <img src="imagenes/teclado1.jpg" class="d-block w-40" alt="...">
                 </div>
-                <div class="carousel-item" data-interval="5000">
-                    <img class="d-block w-50 mx-auto" src="imagenes/mouse1.jpg" alt="Segunda imagen del producto">
+                <div class="carousel-item">
+                    
+                    <img src="imagenes/mouse2.jpg" class="d-block w-40" alt="...">
                 </div>
-                <div class="carousel-item" data-interval="5000">
-                    <img class="d-block w-50 mx-auto" src="imagenes/monitor3.jpg" alt="Tercera imagen del producto">
+                <div class="carousel-item">
+                    
+                    <img src="imagenes/monitor1.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    
+                    <img src="imagenes/mousepad1.jpg" class="d-block w-50" alt="...">
+                </div>
+                <div class="carousel-item">
+                    
+                    <img src="imagenes/audifono3.jpg" class="d-block w-10" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
+                <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Siguiente</span>
+                <span class="sr-only">Next</span>
             </a>
         </div>
-    
+            
         <a href="productos.html" class="btn">Para conocer los productos, CLICK AQUI</a>
     </section>
 
-    <section class="content price">
+    <!-- Sección Acerca de -->
+    <section class="content about" id="about">
+        <h2 class="tittle">Acerca de</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt eius eligendi autem ipsum magni architecto accusantium, perferendis nesciunt provident dolorem aperiam voluptate quibusdam nisi illum sapiente! Porro, tempora culpa.</p>
+        <a href="#" class="btn">Más información</a>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section class="content us" id="us">
         <h2 class="tittle">Nosotros</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi dolorum deleniti ad rem
-            , sed quia tempora neque, commodi nemo vitae repudiandae,
-            repellat dolorem nesciunt! Molestiae tempora reprehenderit inventore labore voluptate.
-        </p>
-        <a href="#" class="btn">Saber Precio</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos deserunt eius eligendi autem ipsum magni architecto accusantium, perferendis nesciunt provident dolorem aperiam voluptate quibusdam nisi illum sapiente! Porro, tempora culpa.</p>
+        <a href="#" class="btn">Conoce más sobre nosotros</a>
     </section>
 
-    <section class="content contact">
-        <h2 class="tittle">Contacto</h2>
-        <p>999999999</p>
-        <figure class="map">
-            <img src="contacto.webp" height="150" width="5%" alt="mapa">
-        </figure>
-    </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="carrito.html"></script> <!-- Aquí está la referencia a tu archivo JavaScript -->
+    <script src="carrito.js"></script> <!-- Aquí está la referencia a tu archivo JavaScript -->
 
 </body>
 </html>

@@ -59,9 +59,16 @@
         .map {
             text-align: center;
         }
+        .center-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
     </style>
     <script>
-        // Crear un objeto para almacenar los productos en el carrito
+        // Crear un objeto p
         var cart = {};
 
         // Función para agregar un producto al carrito
@@ -82,52 +89,94 @@
             console.log(product + ": " + cart[product].quantity + " total: $" + cart[product].totalPrice);
         }
     }   
+    var carrito = [];
+
+      function agregarCarrito(producto, precio) {
+       carrito.push({ producto: producto, precio: precio });
+
+      var listaCarrito = document.getElementById('listaCarrito');
+      var itemCarrito = document.createElement('li');
+      itemCarrito.textContent = producto + ': $' + precio;
+      listaCarrito.appendChild(itemCarrito);
+
+      var total = carrito.reduce(function(total, item) {
+        return total + item.precio;
+      }, 0);
+
+      var totalCarrito = document.getElementById('totalCarrito');
+      totalCarrito.textContent = 'Total de la venta es: $' + total;
+}
     </script>
 </head>
 <body>
 
     <section class="content sau">
         <h2 class="tittle">Productos</h2>
-        <p></p>
+    
 
         <div class="box-container">
             <div class="product">
                 <h3>Audifonos</h3>
                 <p>AF=AudiFonos</p>
+                <img src="imagenes/audifono1.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('AF1', 30000)">Añadir AU1 al carrito</button>
+                <img src="imagenes/audifono2.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('AF2', 40000)">Añadir AU2 al carrito</button>
+                <img src="imagenes/audifono3.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('AF3', 50000)">Añadir AU3 al carrito</button>
             </div>
 
             <div class="product">
                 <h3>Teclado</h3>
-                <p>T=TecLado</p>
+                <p>TL=TecLado</p>
+                <img src="imagenes/teclado1.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('TL1', 50000)">Añadir TC1 al carrito</button>
+                <img src="imagenes/teclado2.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('TL2', 60000)">Añadir TC2 al carrito</button>
+                <img src="imagenes/teclado3.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('TL3', 70000)">Añadir TC3 al carrito</button>
+
             </div>
             <div class="product">
                 <h3>Mouse</h3>
                 <p>MS=MouSe</p>
+                <img src="imagenes/mouse1.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('MS1', 40000)">Añadir MS1 al carrito</button>
+                <img src="imagenes/mouse2.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('MS2', 50000)">Añadir MS2 al carrito</button>
+                <img src="imagenes/mouse3.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('MS3', 60000)">Añadir MS3 al carrito</button>
+
             </div>
             <div class="product">
                 <h3>Mousepad</h3>
                 <p>MP=MousePad</p>
+                <img src="imagenes/mousepad1.jpg" class="d-block w-50" alt="...">
                 <button onclick="agregarCarrito('MP1', 10000)">Añadir MP1 al carrito</button>
+                <img src="imagenes/mousepad2.jpg" class="d-block w-50" alt="...">
                 <button onclick="agregarCarrito('MP2', 15000)">Añadir MP2 al carrito</button>
+                <img src="imagenes/mousepad3.jpg" class="d-block w-50" alt="...">
                 <button onclick="agregarCarrito('MP3', 20000)">Añadir MP3 al carrito</button>
+
             </div>
             
             <div class="product">
                 <h3>Monitor</h3>
                 <p>MT=MoniTor</p>
+                <img src="imagenes/monitor1.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('MT1', 100000)">Añadir MO1 al carrito</button>
+                <img src="imagenes/monitor2.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('MT2', 150000)">Añadir MO2 al carrito</button>
+                <img src="imagenes/monitor3.jpg" class="d-block w-25" alt="...">
                 <button onclick="agregarCarrito('MT3', 200000)">Añadir MO3 al carrito</button>
+
             </div>
+        </div>
+
+
+        <div class="center-content">
+            <ul id="listaCarrito"></ul>
+            <p id="totalCarrito"></p>
         </div>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
